@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med-Gemma - Simple Version</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .simple-test {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .simple-test button {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #0099ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .simple-test button:hover {
+            background: #0077cc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="simple-test">
+        <h1>Med-Gemma Simple Test</h1>
+
+        <h2>Test 1: Inline onclick</h2>
+        <button onclick="alert('Inline onclick çalışıyor!')">Test Inline</button>
+
+        <h2>Test 2: addEventListener</h2>
+        <button id="testBtn">Test addEventListener</button>
+
+        <h2>Test 3: Chat Input</h2>
+        <input type="text" id="testInput" placeholder="Bir şey yazın..." style="padding: 10px; width: 300px;">
+        <button id="testSend">Gönder</button>
+        <div id="testOutput" style="margin-top: 10px; padding: 10px; background: #f0f0f0;"></div>
+
+        <h2>Ana Sayfa</h2>
+        <a href="index.html">index.html'e dön</a>
+    </div>
+
+    <script>
+        console.log('Simple test page loaded');
+
+        // Test 2
+        const testBtn = document.getElementById('testBtn');
+        if (testBtn) {
+            testBtn.addEventListener('click', () => {
+                alert('addEventListener çalışıyor!');
+                console.log('Test button clicked');
+            });
+            console.log('Test button event listener attached');
+        } else {
+            console.error('Test button not found!');
+        }
+
+        // Test 3
+        const testInput = document.getElementById('testInput');
+        const testSend = document.getElementById('testSend');
+        const testOutput = document.getElementById('testOutput');
+
+        if (testSend) {
+            testSend.addEventListener('click', () => {
+                const text = testInput.value;
+                testOutput.innerHTML = `<strong>Gönderildi:</strong> ${text}`;
+                testInput.value = '';
+                console.log('Message sent:', text);
+            });
+            console.log('Send button event listener attached');
+        }
+
+        // Enter key
+        if (testInput) {
+            testInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    testSend.click();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

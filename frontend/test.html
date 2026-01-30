@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Med-Gemma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #0099ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0077cc;
+        }
+
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            display: none;
+        }
+
+        .error {
+            background: #ffebee;
+            border-left-color: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔧 Med-Gemma Test Sayfası</h1>
+
+    <div class="test-section">
+        <h2>1. JavaScript Test</h2>
+        <button onclick="testBasic()">Test: Basit JavaScript</button>
+        <div id="test1" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Backend Bağlantı Testi</h2>
+        <button onclick="testBackend()">Test: Backend API</button>
+        <div id="test2" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Example Image Test</h2>
+        <button onclick="testImage()">Test: Örnek Görüntü Yükleme</button>
+        <div id="test3" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>4. Log Çıktısı</h2>
+        <button onclick="clearLog()">Log Temizle</button>
+        <div id="console"
+            style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-family: monospace; font-size: 12px; max-height: 300px; overflow-y: auto;">
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Ana Uygulamaya Dön</h2>
+        <button onclick="window.location.href='index.html'" style="background: #4caf50;">index.html'e Git</button>
+    </div>
+
+    <script>
+        // Custom console log
+        const originalLog = console.log;
+        console.log = function (...args) {
+            originalLog.apply(console, args);
+            const logDiv = document.getElementById('console');
+            if (logDiv) {
+                const msg = args.map(arg =>
+                    typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+                ).join(' ');
+                logDiv.innerHTML += `<div style="border-bottom: 1px solid #ddd; padding: 5px;">${new Date().toLocaleTimeString()}: ${msg}</div>`;
+                logDiv.scrollTop = logDiv.scrollHeight;
+            }
+        };
+
+        console.log('Test sayfası yüklendi');
+
+        function clearLog() {
+            document.getElementById('console').innerHTML = '';
+            console.log('Log temizlendi');
+        }
+
+        function testBasic() {
+            const div = document.getElementById('test1');
+            div.style.display = 'block';
+            div.className = 'result';
+            div.innerHTML = '✅ JavaScript Çalışıyor! Tarih: ' + new Date().toLocaleString();
+            console.log('Test 1: JavaScript çalışıyor');
+        }
+
+        async function testBackend() {
+            const div = document.getElementById('test2');
+            div.style.display = 'block';
+            console.log('Test 2: Backend testi başladı...');
+
+            try {
+                const response = await fetch('http://localhost:8000/api/health');
+                const data = await response.json();
+
+                div.className = 'result';
+                div.innerHTML = `
+                    ✅ Backend Bağlantısı Başarılı!<br>
+                    Status: ${data.status}<br>
+                    CUDA: ${data.cuda_available ? 'Var' : 'Yok'}<br>
+                    Device: ${data.device_name || 'N/A'}
+                `;
+                console.log('Test 2: Backend bağlantısı başarılı', data);
+            } catch (error) {
+                div.className = 'result error';
+                div.innerHTML = '❌ Backend Hatası: ' + error.message;
+                console.error('Test 2: Backend hatası', error);
+            }
+        }
+
+        async function testImage() {
+            const div = document.getElementById('test3');
+            div.style.display = 'block';
+            console.log('Test 3: Görüntü yükleme testi...');
+
+            try {
+                const imagePath = 'assets/examples/normal_xray.png';
+                console.log('Görüntü yolu:', imagePath);
+
+                const response = await fetch(imagePath);
+                if (!response.ok) throw new Error('Görüntü bulunamadı: ' + response.status);
+
+                const blob = await response.blob();
+                console.log('Blob boyutu:', blob.size, 'bytes');
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    div.className = 'result';
+                    div.innerHTML = `
+                        ✅ Görüntü Yükleme Başarılı!<br>
+                        Boyut: ${(blob.size / 1024).toFixed(2)} KB<br>
+                        <img src="${e.target.result}" style="max-width: 200px; margin-top: 10px;">
+                    `;
+                    console.log('Test 3: Görüntü başarıyla yüklendi');
+                };
+                reader.readAsDataURL(blob);
+            } catch (error) {
+                div.className = 'result error';
+                div.innerHTML = '❌ Görüntü Hatası: ' + error.message;
+                console.error('Test 3: Görüntü hatası', error);
+            }
+        }
+    </script>
+</body>
+
+</html>
