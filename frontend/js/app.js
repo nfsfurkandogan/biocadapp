@@ -1,4 +1,4 @@
-// Med-Gemma Main Application Controller
+// BioCad Main Application Controller
 // Modern JavaScript with ES6+ features
 
 class MedGemmaApp {
@@ -327,12 +327,12 @@ class MedGemmaApp {
 let app;
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        console.log('DOM loaded, initializing Med-Gemma...');
+        console.log('DOM loaded, initializing BioCad...');
         app = new MedGemmaApp();
         window.app = app;
     });
 } else {
-    console.log('DOM already loaded, initializing Med-Gemma...');
+    console.log('DOM already loaded, initializing BioCad...');
     app = new MedGemmaApp();
     window.app = app;
 }
