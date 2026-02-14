@@ -118,8 +118,10 @@ body {
     gap: var(--spacing-md);
 }
 
-.logo-icon {
-    display: none;
+.logo-mark {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
 }
 
 .logo-text h1 {
