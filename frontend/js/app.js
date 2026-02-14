@@ -3,8 +3,8 @@
 
 class MedGemmaApp {
     constructor() {
-        const apiHost = window.location.hostname || 'localhost';
-        this.API_BASE = `${window.location.protocol}//${apiHost}:8000/api`;
+        const apiOrigin = `${window.location.protocol}//${window.location.host}`;
+        this.API_BASE = `${apiOrigin}/api`;
         this.currentModule = 'chat';
         this.currentLanguage = 'tr';
         this.theme = localStorage.getItem('theme') || 'light';
