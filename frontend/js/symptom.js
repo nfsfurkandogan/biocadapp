@@ -96,7 +96,7 @@ class SymptomModule {
                     cursor: pointer;
                     font-size: 1.2rem;
                     padding: var(--spacing-xs);
-                ">✕</button>
+                ">Kaldır</button>
             </div>
         `).join('');
 
@@ -190,7 +190,7 @@ class SymptomModule {
                 border-left: 4px solid var(--warning);
                 border-radius: var(--radius-md);
             ">
-                <strong>⚠️ Önemli Uyarı:</strong> Bu analiz sadece bilgilendirme amaçlıdır. 
+                <strong>Önemli Uyarı:</strong> Bu analiz sadece bilgilendirme amaçlıdır. 
                 Kesin tanı ve tedavi için mutlaka bir sağlık uzmanına başvurun.
             </div>
         `;

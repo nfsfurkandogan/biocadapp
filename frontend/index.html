@@ -8,7 +8,7 @@
     <title>BioCad Medical Assistant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,16 +17,16 @@
     <div id="disclaimerModal" class="modal active">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>⚕️ Tıbbi Sorumluluk Reddi</h2>
+                <h2>Tıbbi Sorumluluk Reddi</h2>
             </div>
             <div class="modal-body">
                 <div class="disclaimer-text">
                     <p><strong>Önemli:</strong> Bu uygulama eğitim ve araştırma amaçlıdır.</p>
                     <ul>
-                        <li>🔬 Klinik kullanım için FDA/CE onayı gerekmektedir</li>
-                        <li>👨‍⚕️ Üretilen sonuçlar profesyonel tıbbi görüş yerine geçmez</li>
-                        <li>🏥 Acil durumlarda 112'yi arayın veya en yakın sağlık kuruluşuna başvurun</li>
-                        <li>💊 İlaç kullanımı ve tedavi kararları için mutlaka doktorunuza danışın</li>
+                        <li>Klinik kullanım için FDA/CE onayı gerekmektedir</li>
+                        <li>Üretilen sonuçlar profesyonel tıbbi görüş yerine geçmez</li>
+                        <li>Acil durumlarda 112'yi arayın veya en yakın sağlık kuruluşuna başvurun</li>
+                        <li>İlaç kullanımı ve tedavi kararları için mutlaka doktorunuza danışın</li>
                     </ul>
                     <p class="disclaimer-warning">Bu uygulamayı kullanarak yukarıdaki koşulları kabul etmiş
                         sayılırsınız.</p>
@@ -44,7 +44,6 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="logo">
-                    <div class="logo-icon">⚕️</div>
                     <div class="logo-text">
                         <h1>BioCad</h1>
                         <span>AI Medical Assistant</span>
@@ -54,54 +53,44 @@
 
             <nav class="sidebar-nav">
                 <a href="#" class="nav-item active" data-module="chat">
-                    <span class="nav-icon">💬</span>
                     <span class="nav-text">Tıbbi Sohbet</span>
                 </a>
                 <a href="#" class="nav-item" data-module="xray">
-                    <span class="nav-icon">🩻</span>
                     <span class="nav-text">Röntgen Analizi</span>
                 </a>
                 <a href="#" class="nav-item" data-module="ctmr">
-                    <span class="nav-icon">🔬</span>
                     <span class="nav-text">CT/MR Analizi</span>
                 </a>
                 <a href="#" class="nav-item" data-module="fundus">
-                    <span class="nav-icon">👁️</span>
                     <span class="nav-text">Fundus/Göz</span>
                 </a>
                 <a href="#" class="nav-item" data-module="dermo">
-                    <span class="nav-icon">🔍</span>
                     <span class="nav-text">Dermatoloji</span>
                 </a>
                 <a href="#" class="nav-item" data-module="histo">
-                    <span class="nav-icon">🧬</span>
                     <span class="nav-text">Histopatoloji</span>
                 </a>
                 <a href="#" class="nav-item" data-module="lab">
-                    <span class="nav-icon">🧪</span>
                     <span class="nav-text">Lab Sonuçları</span>
                 </a>
                 <a href="#" class="nav-item" data-module="compare">
-                    <span class="nav-icon">🔄</span>
                     <span class="nav-text">Görüntü Karşılaştır</span>
                 </a>
                 <a href="#" class="nav-item" data-module="drug">
-                    <span class="nav-icon">💊</span>
                     <span class="nav-text">İlaç Bilgisi</span>
                 </a>
                 <a href="#" class="nav-item" data-module="symptom">
-                    <span class="nav-icon">🩺</span>
                     <span class="nav-text">Semptom Analizi</span>
                 </a>
             </nav>
 
             <div class="sidebar-footer">
                 <div class="language-switch">
-                    <button class="lang-btn active" data-lang="tr">🇹🇷 TR</button>
-                    <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
                 </div>
                 <button class="theme-toggle" id="themeToggle">
-                    <span class="theme-icon">🌙</span>
+                    Tema
                 </button>
                 <div class="gpu-status" id="gpuStatus">
                     <span class="status-dot"></span>
@@ -118,7 +107,7 @@
                     <label class="checkbox-label"
                         style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
                         <input type="checkbox" id="usePatientContext" class="checkbox-input">
-                        <span>👤 Hasta Bilgilerini Analize Dahil Et</span>
+                        <span>Hasta Bilgilerini Analize Dahil Et</span>
                     </label>
                     <small style="opacity: 0.6; margin-left: auto;">(Opsiyonel)</small>
                 </div>
@@ -149,14 +138,14 @@
             <!-- Chat Module -->
             <div id="chatModule" class="module active">
                 <div class="module-header">
-                    <h2>💬 Tıbbi Sohbet Asistanı</h2>
+                    <h2>Tıbbi Sohbet Asistanı</h2>
                     <p>Tıbbi sorularınızı sorun, yapay zeka size yardımcı olsun</p>
                 </div>
 
                 <div class="chat-container">
                     <div class="chat-messages" id="chatMessages">
                         <div class="message assistant">
-                            <div class="message-avatar">🤖</div>
+                            <div class="message-avatar">BC</div>
                             <div class="message-content">
                                 <p>Merhaba! Ben BioCad, yapay zeka destekli tıbbi asistanınızım. Size nasıl yardımcı
                                     olabilirim?</p>
@@ -172,10 +161,7 @@
                         <div class="chat-input-wrapper">
                             <textarea id="chatInput" class="chat-input" placeholder="Tıbbi sorunuzu buraya yazın..."
                                 rows="1"></textarea>
-                            <button id="sendChat" class="btn-send">
-                                <span>Gönder</span>
-                                <span class="send-icon">➤</span>
-                            </button>
+                            <button id="sendChat" class="btn-send">Gönder</button>
                         </div>
                     </div>
                 </div>
@@ -184,14 +170,13 @@
             <!-- X-Ray Analysis Module -->
             <div id="xrayModule" class="module">
                 <div class="module-header">
-                    <h2>🩻 Röntgen Görüntüsü Analizi</h2>
+                    <h2>Röntgen Görüntüsü Analizi</h2>
                     <p>Göğüs röntgeni yükleyin ve yapay zeka analizini alın</p>
                 </div>
 
                 <div class="xray-container">
                     <div class="upload-section">
                         <div class="image-upload-area" id="xrayUploadArea">
-                            <div class="upload-icon">📤</div>
                             <h3>Göğüs Röntgeni Yükleyin</h3>
                             <p>Sürükle-bırak yapın veya tıklayın</p>
                             <input type="file" id="xrayInput" accept="image/*" hidden>
@@ -200,7 +185,7 @@
 
                         <div class="image-preview hidden" id="xrayPreview">
                             <img id="xrayImage" src="" alt="X-Ray">
-                            <button class="btn-remove" id="removeXray">✕</button>
+                            <button class="btn-remove" id="removeXray">Kaldır</button>
                         </div>
                     </div>
 
@@ -224,7 +209,6 @@
 
                         <button id="analyzeXray" class="btn btn-primary" disabled>
                             <span>Analiz Et</span>
-                            <span class="btn-icon">🔍</span>
                         </button>
 
                         <div class="example-images-section">
@@ -234,7 +218,7 @@
                     </div>
 
                     <div class="results-section hidden" id="xrayResults">
-                        <h3>📊 Analiz Sonuçları</h3>
+                        <h3>Analiz Sonuçları</h3>
                         <div class="result-content" id="xrayResultContent"></div>
                     </div>
                 </div>
@@ -243,7 +227,7 @@
             <!-- Drug Information Module -->
             <div id="drugModule" class="module">
                 <div class="module-header">
-                    <h2>💊 İlaç Bilgi Sistemi</h2>
+                    <h2>İlaç Bilgi Sistemi</h2>
                     <p>İlaç bilgileri, yan etkiler ve etkileşimler hakkında bilgi alın</p>
                 </div>
 
@@ -254,7 +238,6 @@
                                 placeholder="İlaç adı veya etken madde girin (Örn: Aspirin, Paracetamol)">
                             <button id="searchDrug" class="btn btn-primary">
                                 <span>Ara</span>
-                                <span class="btn-icon">🔍</span>
                             </button>
                         </div>
 
@@ -293,7 +276,7 @@
                     </div>
 
                     <div class="drug-results-section hidden" id="drugResults">
-                        <h3>📋 İlaç Bilgileri</h3>
+                        <h3>İlaç Bilgileri</h3>
                         <div class="result-content" id="drugResultContent"></div>
                     </div>
                 </div>
@@ -302,7 +285,7 @@
             <!-- Symptom Analysis Module -->
             <div id="symptomModule" class="module">
                 <div class="module-header">
-                    <h2>🔍 Semptom Analizi ve Triaj</h2>
+                    <h2>Semptom Analizi ve Triaj</h2>
                     <p>Semptomlarınızı girin ve yapay zeka değerlendirmesi alın</p>
                 </div>
 
@@ -353,12 +336,11 @@
 
                         <button id="analyzeSymptoms" class="btn btn-primary" disabled>
                             <span>Analiz Et</span>
-                            <span class="btn-icon">🔍</span>
                         </button>
                     </div>
 
                     <div class="symptom-results-section hidden" id="symptomResults">
-                        <h3>📊 Semptom Analizi Sonuçları</h3>
+                        <h3>Semptom Analizi Sonuçları</h3>
                         <div class="result-content" id="symptomResultContent"></div>
                     </div>
                 </div>
@@ -367,20 +349,19 @@
             <!-- CT/MR Analysis Module -->
             <div id="ctmrModule" class="module">
                 <div class="module-header">
-                    <h2>🔬 CT/MR Görüntü Analizi</h2>
+                    <h2>CT/MR Görüntü Analizi</h2>
                     <p>CT/MR görüntüsü veya DICOM (.dcm) yükleyin, yapay zeka analiz etsin</p>
                 </div>
                 <div class="imaging-container">
                     <div class="upload-section">
                         <div class="upload-area" id="ctmrUploadArea">
-                            <div class="upload-icon">🔬</div>
                             <h3>CT veya MR Görüntüsü Yükle</h3>
                             <p>Sürükleyip bırakın veya tıklayın (PNG/JPG/DICOM)</p>
                             <input type="file" id="ctmrInput" accept="image/*,.dcm,.dicom,application/dicom" hidden>
                         </div>
                         <div class="image-preview hidden" id="ctmrPreview">
                             <img id="ctmrImage" alt="CT/MR">
-                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('ctmr')">✕</button>
+                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('ctmr')">Kaldır</button>
                         </div>
                     </div>
                     <div class="analysis-options">
@@ -393,10 +374,10 @@
                         </select>
                         <textarea id="ctmrQuestion" class="input-field"
                             placeholder="Bu görüntüye özel ek not veya soru (opsiyonel)"></textarea>
-                        <button id="analyzeCTMR" class="btn btn-primary" disabled>🔍 Analiz Et</button>
+                        <button id="analyzeCTMR" class="btn btn-primary" disabled>Analiz Et</button>
 
                         <div class="example-images">
-                            <p>📷 Örnek görüntüler:</p>
+                            <p>Örnek görüntüler:</p>
                             <div class="example-thumbnails">
                                 <img src="assets/examples/brain_mri.png" class="example-thumb"
                                     onclick="window.imagingModule?.loadExampleImage('ctmr', this.src)" alt="Beyin MR"
@@ -405,7 +386,7 @@
                         </div>
                     </div>
                     <div class="results-section hidden" id="ctmrResults">
-                        <h3>📊 Analiz Sonuçları</h3>
+                        <h3>Analiz Sonuçları</h3>
                         <div class="result-content" id="ctmrResultContent"></div>
                     </div>
                 </div>
@@ -414,20 +395,19 @@
             <!-- Fundus/Eye Module -->
             <div id="fundusModule" class="module">
                 <div class="module-header">
-                    <h2>👁️ Fundus/Göz Görüntü Analizi</h2>
+                    <h2>Fundus/Göz Görüntü Analizi</h2>
                     <p>Retina görüntülerini analiz edin</p>
                 </div>
                 <div class="imaging-container">
                     <div class="upload-section">
                         <div class="upload-area" id="fundusUploadArea">
-                            <div class="upload-icon">👁️</div>
                             <h3>Fundus/Retina Görüntüsü Yükle</h3>
                             <p>Sürükleyip bırakın veya tıklayın</p>
                             <input type="file" id="fundusInput" accept="image/*" hidden>
                         </div>
                         <div class="image-preview hidden" id="fundusPreview">
                             <img id="fundusImage" alt="Fundus">
-                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('fundus')">✕</button>
+                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('fundus')">Kaldır</button>
                         </div>
                     </div>
                     <div class="analysis-options">
@@ -438,11 +418,11 @@
                             <option value="general">Genel Değerlendirme</option>
                         </select>
                         <textarea id="fundusQuestion" class="input-field"
-                            placeholder="📝 Bu görüntüye özel ek not veya soru (opsiyonel)"></textarea>
-                        <button id="analyzeFundus" class="btn btn-primary" disabled>🔍 Analiz Et</button>
+                            placeholder="Bu görüntüye özel ek not veya soru (opsiyonel)"></textarea>
+                        <button id="analyzeFundus" class="btn btn-primary" disabled>Analiz Et</button>
 
                         <div class="example-images">
-                            <p>📷 Örnek görüntü:</p>
+                            <p>Örnek görüntü:</p>
                             <div class="example-thumbnails">
                                 <img src="assets/examples/fundus_retina.png" class="example-thumb"
                                     onclick="window.imagingModule?.loadExampleImage('fundus', this.src)" alt="Fundus"
@@ -451,7 +431,7 @@
                         </div>
                     </div>
                     <div class="results-section hidden" id="fundusResults">
-                        <h3>📊 Analiz Sonuçları</h3>
+                        <h3>Analiz Sonuçları</h3>
                         <div class="result-content" id="fundusResultContent"></div>
                     </div>
                 </div>
@@ -460,20 +440,19 @@
             <!-- Dermoscopy Module -->
             <div id="dermoModule" class="module">
                 <div class="module-header">
-                    <h2>🔍 Dermatoloji/Cilt Analizi</h2>
+                    <h2>Dermatoloji/Cilt Analizi</h2>
                     <p>Cilt lezyonlarını ve dermoskopi görüntülerini analiz edin</p>
                 </div>
                 <div class="imaging-container">
                     <div class="upload-section">
                         <div class="upload-area" id="dermoUploadArea">
-                            <div class="upload-icon">🔍</div>
                             <h3>Dermatoskopi/Cilt Görüntüsü Yükle</h3>
                             <p>Sürükleyip bırakın veya tıklayın</p>
                             <input type="file" id="dermoInput" accept="image/*" hidden>
                         </div>
                         <div class="image-preview hidden" id="dermoPreview">
                             <img id="dermoImage" alt="Dermoscopy">
-                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('dermo')">✕</button>
+                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('dermo')">Kaldır</button>
                         </div>
                     </div>
                     <div class="analysis-options">
@@ -484,11 +463,11 @@
                             <option value="general">Genel Dermatolojik Değerlendirme</option>
                         </select>
                         <textarea id="dermoQuestion" class="input-field"
-                            placeholder="📝 Bu görüntüye özel ek not veya soru (opsiyonel)"></textarea>
-                        <button id="analyzeDermo" class="btn btn-primary" disabled>🔍 Analiz Et</button>
+                            placeholder="Bu görüntüye özel ek not veya soru (opsiyonel)"></textarea>
+                        <button id="analyzeDermo" class="btn btn-primary" disabled>Analiz Et</button>
 
                         <div class="example-images">
-                            <p>📷 Örnek görüntü:</p>
+                            <p>Örnek görüntü:</p>
                             <div class="example-thumbnails">
                                 <img src="assets/examples/dermoscopy_skin.png" class="example-thumb"
                                     onclick="window.imagingModule?.loadExampleImage('dermo', this.src)" alt="Dermoskopi"
@@ -497,7 +476,7 @@
                         </div>
                     </div>
                     <div class="results-section hidden" id="dermoResults">
-                        <h3>📊 Analiz Sonuçları</h3>
+                        <h3>Analiz Sonuçları</h3>
                         <div class="result-content" id="dermoResultContent"></div>
                     </div>
                 </div>
@@ -506,20 +485,19 @@
             <!-- Histopathology Module -->
             <div id="histoModule" class="module">
                 <div class="module-header">
-                    <h2>🧬 Histopatoloji Analizi</h2>
+                    <h2>Histopatoloji Analizi</h2>
                     <p>Patoloji ve biyopsi görüntülerini analiz edin</p>
                 </div>
                 <div class="imaging-container">
                     <div class="upload-section">
                         <div class="upload-area" id="histoUploadArea">
-                            <div class="upload-icon">🧬</div>
                             <h3>Patoloji/Biyopsi Görüntüsü Yükle</h3>
                             <p>Sürükleyip bırakın veya tıklayın</p>
                             <input type="file" id="histoInput" accept="image/*" hidden>
                         </div>
                         <div class="image-preview hidden" id="histoPreview">
                             <img id="histoImage" alt="Histopathology">
-                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('histo')">✕</button>
+                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('histo')">Kaldır</button>
                         </div>
                     </div>
                     <div class="analysis-options">
@@ -530,11 +508,11 @@
                             <option value="general">Genel Patoloji</option>
                         </select>
                         <textarea id="histoQuestion" class="input-field"
-                            placeholder="📝 Bu görüntüye özel ek not veya soru (opsiyonel)"></textarea>
-                        <button id="analyzeHisto" class="btn btn-primary" disabled>🔍 Analiz Et</button>
+                            placeholder="Bu görüntüye özel ek not veya soru (opsiyonel)"></textarea>
+                        <button id="analyzeHisto" class="btn btn-primary" disabled>Analiz Et</button>
 
                         <div class="example-images">
-                            <p>📷 Örnek görüntü:</p>
+                            <p>Örnek görüntü:</p>
                             <div class="example-thumbnails">
                                 <img src="assets/examples/histopathology.png" class="example-thumb"
                                     onclick="window.imagingModule?.loadExampleImage('histo', this.src)"
@@ -543,7 +521,7 @@
                         </div>
                     </div>
                     <div class="results-section hidden" id="histoResults">
-                        <h3>📊 Analiz Sonuçları</h3>
+                        <h3>Analiz Sonuçları</h3>
                         <div class="result-content" id="histoResultContent"></div>
                     </div>
                 </div>
@@ -552,20 +530,19 @@
             <!-- Lab Results Module -->
             <div id="labModule" class="module">
                 <div class="module-header">
-                    <h2>🧪 Lab Sonucu Okuma</h2>
+                    <h2>Lab Sonucu Okuma</h2>
                     <p>Kan tahlili veya lab sonuçlarınızı yükleyin, yapay zeka yorumlasın</p>
                 </div>
                 <div class="imaging-container">
                     <div class="upload-section">
                         <div class="upload-area" id="labUploadArea">
-                            <div class="upload-icon">🧪</div>
                             <h3>Lab Sonucu Yükle (PNG/JPG)</h3>
                             <p>Lab sonucunuzun ekran görüntüsünü veya fotoğrafını yükleyin</p>
                             <input type="file" id="labInput" accept="image/*" hidden>
                         </div>
                         <div class="image-preview hidden" id="labPreview">
                             <img id="labImage" alt="Lab Sonucu">
-                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('lab')">✕</button>
+                            <button class="remove-btn" onclick="window.imagingModule?.removeImage('lab')">Kaldır</button>
                         </div>
                     </div>
                     <div class="analysis-options">
@@ -578,11 +555,11 @@
                             <option value="general">Genel Değerlendirme</option>
                         </select>
                         <textarea id="labQuestion" class="input-field"
-                            placeholder="📝 Bu sonuca özel ek not veya soru (opsiyonel)"></textarea>
-                        <button id="analyzeLab" class="btn btn-primary" disabled>📋 Sonuçları Yorumla</button>
+                            placeholder="Bu sonuca özel ek not veya soru (opsiyonel)"></textarea>
+                        <button id="analyzeLab" class="btn btn-primary" disabled>Sonuçları Yorumla</button>
 
                         <div class="example-images">
-                            <p>📷 Örnek lab sonucu:</p>
+                            <p>Örnek lab sonucu:</p>
                             <div class="example-thumbnails">
                                 <img src="assets/examples/lab_blood_test.png" class="example-thumb"
                                     onclick="window.imagingModule?.loadExampleImage('lab', this.src)" alt="Lab Sonucu"
@@ -591,7 +568,7 @@
                         </div>
                     </div>
                     <div class="results-section hidden" id="labResults">
-                        <h3>📊 Lab Sonucu Yorumu</h3>
+                        <h3>Lab Sonucu Yorumu</h3>
                         <div class="result-content" id="labResultContent"></div>
                     </div>
                 </div>
@@ -600,35 +577,33 @@
             <!-- Image Comparison Module -->
             <div id="compareModule" class="module">
                 <div class="module-header">
-                    <h2>🔄 Görüntü Karşılaştırma</h2>
+                    <h2>Görüntü Karşılaştırma</h2>
                     <p>Önceki ve sonraki görüntüleri karşılaştırarak progresyon değerlendirin</p>
                 </div>
                 <div class="compare-container">
                     <div class="compare-images">
                         <div class="compare-box">
-                            <h4>📅 Önceki Görüntü</h4>
+                            <h4>Önceki Görüntü</h4>
                             <div class="upload-area" id="compareBeforeArea">
-                                <div class="upload-icon">📤</div>
                                 <p>Önceki görüntüyü yükleyin</p>
                                 <input type="file" id="compareBeforeInput" accept="image/*" hidden>
                             </div>
                             <div class="image-preview hidden" id="compareBeforePreview">
                                 <img id="compareBeforeImage" alt="Önceki">
                                 <button class="remove-btn"
-                                    onclick="window.imagingModule?.removeCompareImage('before')">✕</button>
+                                    onclick="window.imagingModule?.removeCompareImage('before')">Kaldır</button>
                             </div>
                         </div>
                         <div class="compare-box">
-                            <h4>📅 Sonraki Görüntü</h4>
+                            <h4>Sonraki Görüntü</h4>
                             <div class="upload-area" id="compareAfterArea">
-                                <div class="upload-icon">📤</div>
                                 <p>Sonraki görüntüyü yükleyin</p>
                                 <input type="file" id="compareAfterInput" accept="image/*" hidden>
                             </div>
                             <div class="image-preview hidden" id="compareAfterPreview">
                                 <img id="compareAfterImage" alt="Sonraki">
                                 <button class="remove-btn"
-                                    onclick="window.imagingModule?.removeCompareImage('after')">✕</button>
+                                    onclick="window.imagingModule?.removeCompareImage('after')">Kaldır</button>
                             </div>
                         </div>
                     </div>
@@ -638,10 +613,10 @@
                             <option value="treatment">Tedavi Yanıtı</option>
                             <option value="general">Genel Karşılaştırma</option>
                         </select>
-                        <button id="analyzeCompare" class="btn btn-primary" disabled>🔄 Karşılaştır</button>
+                        <button id="analyzeCompare" class="btn btn-primary" disabled>Karşılaştır</button>
                     </div>
                     <div class="results-section hidden" id="compareResults">
-                        <h3>📊 Karşılaştırma Sonuçları</h3>
+                        <h3>Karşılaştırma Sonuçları</h3>
                         <div class="result-content" id="compareResultContent"></div>
                     </div>
                 </div>

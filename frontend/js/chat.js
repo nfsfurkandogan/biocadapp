@@ -102,7 +102,7 @@ class ChatModule {
             // Add elapsed time indicator
             const timeIndicator = document.createElement('div');
             timeIndicator.className = 'response-time';
-            timeIndicator.innerHTML = `<small style="opacity: 0.6; font-size: 0.75em;">⏱️ ${elapsedTime} saniye</small>`;
+            timeIndicator.innerHTML = `<small style="opacity: 0.6; font-size: 0.75em;">${elapsedTime} saniye</small>`;
             contentDiv.appendChild(timeIndicator);
 
             // Update conversation history
@@ -133,7 +133,7 @@ class ChatModule {
 
         const avatar = document.createElement('div');
         avatar.className = 'message-avatar';
-        avatar.textContent = type === 'user' ? '👤' : '🤖';
+        avatar.textContent = type === 'user' ? 'S' : 'BC';
 
         const content = document.createElement('div');
         content.className = 'message-content';

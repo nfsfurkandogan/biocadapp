@@ -189,7 +189,7 @@ class XRayModule {
 
             // Add elapsed time
             const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-            resultContent.innerHTML += `<div class="response-time"><small style="opacity: 0.6;">⏱️ ${elapsed} saniye</small></div>`;
+            resultContent.innerHTML += `<div class="response-time"><small style="opacity: 0.6;">${elapsed} saniye</small></div>`;
 
             this.app.showNotification('Analiz tamamlandı!', 'success');
             this.app.modelLoaded = true;
@@ -221,17 +221,17 @@ class XRayModule {
 
         const examples = [
             {
-                name: '✓ Normal Göğüs Röntgeni',
+                name: 'Normal Göğüs Röntgeni',
                 file: 'assets/examples/normal_xray.png',
                 description: 'Sağlıklı akciğerler'
             },
             {
-                name: '⚠️ Pnömoni Örneği',
+                name: 'Pnömoni Örneği',
                 file: 'assets/examples/pneumonia_xray.png',
                 description: 'Akciğer enfeksiyonu'
             },
             {
-                name: '🦠 COVID-19 Pnömonisi',
+                name: 'COVID-19 Pnömonisi',
                 file: 'assets/examples/covid_xray.png',
                 description: 'Viral pnömoni'
             }

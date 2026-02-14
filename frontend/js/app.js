@@ -88,23 +88,23 @@ class MedGemmaApp {
     updateLanguageContent(lang) {
         const translations = {
             tr: {
-                chatTitle: '💬 Tıbbi Sohbet Asistanı',
+                chatTitle: 'Tıbbi Sohbet Asistanı',
                 chatSubtitle: 'Tıbbi sorularınızı sorun, yapay zeka size yardımcı olsun',
-                xrayTitle: '🩻 Röntgen Görüntüsü Analizi',
+                xrayTitle: 'Röntgen Görüntüsü Analizi',
                 xraySubtitle: 'Göğüs röntgeni yükleyin ve yapay zeka analizini alın',
-                drugTitle: '💊 İlaç Bilgi Sistemi',
+                drugTitle: 'İlaç Bilgi Sistemi',
                 drugSubtitle: 'İlaç bilgileri, yan etkiler ve etkileşimler hakkında bilgi alın',
-                symptomTitle: '🔍 Semptom Analizi ve Triaj',
+                symptomTitle: 'Semptom Analizi ve Triaj',
                 symptomSubtitle: 'Semptomlarınızı girin ve yapay zeka değerlendirmesi alın'
             },
             en: {
-                chatTitle: '💬 Medical Chat Assistant',
+                chatTitle: 'Medical Chat Assistant',
                 chatSubtitle: 'Ask medical questions and get AI-powered assistance',
-                xrayTitle: '🩻 X-Ray Image Analysis',
+                xrayTitle: 'X-Ray Image Analysis',
                 xraySubtitle: 'Upload chest X-rays and get AI analysis',
-                drugTitle: '💊 Drug Information System',
+                drugTitle: 'Drug Information System',
                 drugSubtitle: 'Get drug information, side effects, and interactions',
-                symptomTitle: '🔍 Symptom Analysis & Triage',
+                symptomTitle: 'Symptom Analysis & Triage',
                 symptomSubtitle: 'Enter your symptoms and get AI assessment'
             }
         };
@@ -130,9 +130,9 @@ class MedGemmaApp {
 
     applyTheme() {
         document.documentElement.setAttribute('data-theme', this.theme);
-        const themeIcon = document.querySelector('.theme-icon');
-        if (themeIcon) {
-            themeIcon.textContent = this.theme === 'light' ? '🌙' : '☀️';
+        const themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+            themeToggle.textContent = this.theme === 'light' ? 'Koyu Tema' : 'Açık Tema';
         }
     }
 
@@ -257,10 +257,7 @@ class MedGemmaApp {
 
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
-        notification.innerHTML = `
-            <span>${this.getNotificationIcon(type)}</span>
-            <span>${this.escapeHtml(message)}</span>
-        `;
+        notification.innerHTML = `<span>${this.escapeHtml(message)}</span>`;
 
         container.appendChild(notification);
 
@@ -269,16 +266,6 @@ class MedGemmaApp {
             notification.style.animation = 'slideInRight 0.3s reverse';
             setTimeout(() => notification.remove(), 300);
         }, 5000);
-    }
-
-    getNotificationIcon(type) {
-        const icons = {
-            success: '✓',
-            error: '✕',
-            warning: '⚠️',
-            info: 'ℹ️'
-        };
-        return icons[type] || icons.info;
     }
 
     escapeHtml(text) {

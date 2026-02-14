@@ -50,7 +50,7 @@
 </head>
 
 <body>
-    <h1>🔧 Med-Gemma Test Sayfası</h1>
+    <h1>Med-Gemma Test Sayfası</h1>
 
     <div class="test-section">
         <h2>1. JavaScript Test</h2>
@@ -109,7 +109,7 @@
             const div = document.getElementById('test1');
             div.style.display = 'block';
             div.className = 'result';
-            div.innerHTML = '✅ JavaScript Çalışıyor! Tarih: ' + new Date().toLocaleString();
+            div.innerHTML = 'JavaScript çalışıyor. Tarih: ' + new Date().toLocaleString();
             console.log('Test 1: JavaScript çalışıyor');
         }
 
@@ -124,7 +124,7 @@
 
                 div.className = 'result';
                 div.innerHTML = `
-                    ✅ Backend Bağlantısı Başarılı!<br>
+                    Backend bağlantısı başarılı.<br>
                     Status: ${data.status}<br>
                     CUDA: ${data.cuda_available ? 'Var' : 'Yok'}<br>
                     Device: ${data.device_name || 'N/A'}
@@ -132,7 +132,7 @@
                 console.log('Test 2: Backend bağlantısı başarılı', data);
             } catch (error) {
                 div.className = 'result error';
-                div.innerHTML = '❌ Backend Hatası: ' + error.message;
+                div.innerHTML = 'Backend hatası: ' + error.message;
                 console.error('Test 2: Backend hatası', error);
             }
         }
@@ -156,7 +156,7 @@
                 reader.onload = (e) => {
                     div.className = 'result';
                     div.innerHTML = `
-                        ✅ Görüntü Yükleme Başarılı!<br>
+                        Görüntü yükleme başarılı.<br>
                         Boyut: ${(blob.size / 1024).toFixed(2)} KB<br>
                         <img src="${e.target.result}" style="max-width: 200px; margin-top: 10px;">
                     `;
@@ -165,7 +165,7 @@
                 reader.readAsDataURL(blob);
             } catch (error) {
                 div.className = 'result error';
-                div.innerHTML = '❌ Görüntü Hatası: ' + error.message;
+                div.innerHTML = 'Görüntü hatası: ' + error.message;
                 console.error('Test 3: Görüntü hatası', error);
             }
         }

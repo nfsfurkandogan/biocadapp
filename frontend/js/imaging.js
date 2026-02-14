@@ -302,7 +302,7 @@ class ImagingModule {
 
             // Add elapsed time
             const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-            resultContent.innerHTML += `<div class="response-time"><small style="opacity: 0.6;">⏱️ ${elapsed} saniye</small></div>`;
+            resultContent.innerHTML += `<div class="response-time"><small style="opacity: 0.6;">${elapsed} saniye</small></div>`;
 
             this.app.showNotification('Analiz tamamlandı!', 'success');
             this.app.modelLoaded = true;
@@ -346,7 +346,7 @@ class ImagingModule {
         }
 
         const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-        resultContent.innerHTML += `<div class="response-time"><small style="opacity: 0.6;">⏱️ ${elapsed} saniye</small></div>`;
+        resultContent.innerHTML += `<div class="response-time"><small style="opacity: 0.6;">${elapsed} saniye</small></div>`;
 
         this.app.showNotification('DICOM analizi tamamlandı!', 'success');
         this.app.modelLoaded = true;
@@ -425,7 +425,7 @@ class ImagingModule {
                     ${this.app.formatMarkdown(analysis)}
                 </div>
                 <div class="response-time">
-                    <small style="opacity: 0.6;">⏱️ ${elapsed} saniye</small>
+                    <small style="opacity: 0.6;">${elapsed} saniye</small>
                 </div>
             `;
         }
