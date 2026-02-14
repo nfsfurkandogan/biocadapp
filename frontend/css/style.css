@@ -95,7 +95,7 @@ body {
 
 /* ===== Sidebar ===== */
 .sidebar {
-    width: 280px;
+    width: 240px;
     background: var(--bg-tertiary);
     border-right: 1px solid var(--border-color);
     display: flex;
