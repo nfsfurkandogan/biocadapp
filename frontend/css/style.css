@@ -108,33 +108,46 @@ body {
 }
 
 .sidebar-header {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
+}
+
+.logo-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
 }
 
 .logo-mark {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     flex: 0 0 auto;
 }
 
 .logo-text h1 {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     color: var(--primary-600);
 }
 
 .logo-text span {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 /* Navigation */
